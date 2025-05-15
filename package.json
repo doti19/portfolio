@@ -20,6 +20,7 @@
 		"@sveltejs/adapter-auto": "^3.2.2",
 		"@sveltejs/kit": "^2.5.15",
 		"@sveltejs/vite-plugin-svelte": "^3.1.1",
+		"@tailwindcss/typography": "^0.5.16",
 		"@types/eslint": "^8.56.10",
 		"concurrently": "^8.2.2",
 		"eslint": "^9.5.0",
@@ -47,6 +48,7 @@
 		"@threlte/core": "^7.3.0",
 		"@threlte/extras": "^8.11.2",
 		"@types/three": "^0.176.0",
+		"clsx": "^2.1.1",
 		"gsap": "^3.13.0",
 		"tailwindcss": "^4.1.6",
 		"three": "^0.176.0"
