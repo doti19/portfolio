@@ -5,6 +5,9 @@ import tailwindcss from '@tailwindcss/vite';
 
 
 export default defineConfig({
+	// ssr:{
+	// 	noExternal: ['three']
+	// },
 	plugins: [
 		tailwindcss(),
 		sveltekit()],
