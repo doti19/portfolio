@@ -4,6 +4,7 @@
 	import * as THREE from 'three';
 	import gsap from 'gsap';
 	import { elasticOut } from 'svelte/easing';
+	import { onMount } from 'svelte';
 
 	export let position: [number, number, number] = [0, 0, 0];
 	export let geometry: THREE.BufferGeometry = new THREE.IcosahedronGeometry(3);
@@ -16,6 +17,9 @@
     ]
 
 	let visible = false;
+
+	let reducedMotionRate = 0;
+
 	const materialParams = [
 		{ color: 0x2ecc71, roughness: 0 },
 		{ color: 0xf1c40f, roughness: 0.4 },
@@ -63,14 +67,22 @@
 			delay: gsap.utils.random(0, 500)
 		};
 	});
+
+	onMount(()=>{
+		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		reducedMotionRate = prefersReducedMotion ? 0 : 1;
+	})
+
+		$: compoundRate = rate * reducedMotionRate;
+
 </script>
 
 <Threlte.Group position={[position[0] * 2, position[1] * 2, position[2] * 2]}>
 	<Float
-		speed={5 * rate}
-		rotationSpeed={5 * rate}
-		rotationIntensity={6 * rate}
-		floatIntensity={5 * rate}
+		speed={5 * compoundRate}
+		rotationSpeed={5 * compoundRate}
+		rotationIntensity={6 * compoundRate}
+		floatIntensity={5 * compoundRate}
 	>
 		<Threlte.Mesh
 			{visible}
