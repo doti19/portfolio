@@ -29,6 +29,10 @@
 	const material = new THREE.MeshStandardMaterial();
 
 	function getRandomMaterial() {
+		const randomInt = gsap.utils.random(1,10,1);
+		if(randomInt === 1){
+			return new THREE.MeshNormalMaterial()
+		}
 		return new THREE.MeshStandardMaterial(gsap.utils.random(materialParams));
 	}
 

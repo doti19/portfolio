@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import type { RTLabelNode } from '@prismicio/client';
 
 	export let node: RTLabelNode;
@@ -8,4 +8,4 @@
 	<code><slot /></code>
 {:else}
 	<span class={node.data.label}><slot /></span>
-{/if}
+{/if} -->
