@@ -1,0 +1,108 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"subtitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Consectetur laboris tempor commodo officia cillum adipisicing in voluptate ut."
+						}
+					}
+				]
+			},
+			"contact_methods": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"contact_type",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "email",
+									"type": "Select"
+								}
+							],
+							[
+								"value",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "hit",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"services": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"service_name",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "design",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"submit_action": {
+				"key": "12afb991-27f4-42b8-88ec-7137df0b432b",
+				"__TYPE__": "LinkContent",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev"
+				}
+			},
+			"form_title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Voluptate est quis velit exercitation minim ut ullamco sint et cillum veniam. Minim irure incididunt do ex."
+						}
+					}
+				]
+			},
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "voyage",
+				"type": "Text"
+			},
+			"email_js_service_id": {
+				"__TYPE__": "FieldContent",
+				"value": "tool",
+				"type": "Text"
+			},
+			"email_js_template_id": {
+				"__TYPE__": "FieldContent",
+				"value": "exercise",
+				"type": "Text"
+			},
+			"email_js_public_key": {
+				"__TYPE__": "FieldContent",
+				"value": "raw",
+				"type": "Text"
+			},
+			"recaptcha_site_key": {
+				"__TYPE__": "FieldContent",
+				"value": "began",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

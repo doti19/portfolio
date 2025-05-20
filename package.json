@@ -2,9 +2,6 @@
 	"name": "sveltekit-starter-prismic-minimal",
 	"version": "0.0.1",
 	"private": true,
-	"engines": {
-    "node": "20.x"
-  },
 	"scripts": {
 		"dev": "concurrently \"npm:vite:dev\" \"npm:slicemachine\" --prefix-colors blue,magenta",
 		"vite:dev": "vite dev",
@@ -35,6 +32,7 @@
 		"slice-machine-ui": "^2.16.0",
 		"svelte": "^4.2.18",
 		"svelte-check": "^3.8.0",
+		"svelte-recaptcha-v2": "^0.0.2",
 		"tslib": "^2.6.3",
 		"typescript": "^5.5.0",
 		"typescript-eslint": "^8.0.0-alpha.20",
@@ -44,7 +42,9 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@emailjs/browser": "^4.4.1",
 		"@fontsource-variable/urbanist": "^5.2.5",
+		"@mac-barrett/svelte-recaptcha": "^1.2.1",
 		"@prismicio/client": "^7.17.2",
 		"@prismicio/svelte": "^1.5.0",
 		"@tailwindcss/vite": "^4.1.6",
@@ -53,6 +53,7 @@
 		"@types/three": "^0.176.0",
 		"clsx": "^2.1.1",
 		"gsap": "^3.13.0",
+		"react-google-recaptcha": "^3.1.0",
 		"tailwindcss": "^4.1.6",
 		"three": "^0.176.0"
 	}

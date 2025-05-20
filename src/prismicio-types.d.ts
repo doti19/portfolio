@@ -102,6 +102,7 @@ export type BlogpostDocument<Lang extends string = string> = prismic.PrismicDocu
 >;
 
 type PageDocumentDataSlicesSlice =
+	| ContactBlockSlice
 	| ContentIndexSlice
 	| ExperienceSlice
 	| TechListSlice
@@ -503,6 +504,178 @@ type BiographySliceVariation = BiographySliceDefault;
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type BiographySlice = prismic.SharedSlice<'biography', BiographySliceVariation>;
+
+/**
+ * Item in *ContactBlock → Default → Primary → Contact Methods*
+ */
+export interface ContactBlockSliceDefaultPrimaryContactMethodsItem {
+	/**
+	 * Contact Type field in *ContactBlock → Default → Primary → Contact Methods*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_block.default.primary.contact_methods[].contact_type
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	contact_type: prismic.SelectField<'address' | 'phone' | 'email'>;
+
+	/**
+	 * Value field in *ContactBlock → Default → Primary → Contact Methods*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_block.default.primary.contact_methods[].value
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	value: prismic.KeyTextField;
+}
+
+/**
+ * Item in *ContactBlock → Default → Primary → Services*
+ */
+export interface ContactBlockSliceDefaultPrimaryServicesItem {
+	/**
+	 * Service Name field in *ContactBlock → Default → Primary → Services*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_block.default.primary.services[].service_name
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	service_name: prismic.KeyTextField;
+}
+
+/**
+ * Primary content in *ContactBlock → Default → Primary*
+ */
+export interface ContactBlockSliceDefaultPrimary {
+	/**
+	 * Subtitle field in *ContactBlock → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_block.default.primary.subtitle
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	subtitle: prismic.RichTextField;
+
+	/**
+	 * Contact Methods field in *ContactBlock → Default → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_block.default.primary.contact_methods[]
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	contact_methods: prismic.GroupField<Simplify<ContactBlockSliceDefaultPrimaryContactMethodsItem>>;
+
+	/**
+	 * Services field in *ContactBlock → Default → Primary*
+	 *
+	 * - **Field Type**: Group
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_block.default.primary.services[]
+	 * - **Documentation**: https://prismic.io/docs/field#group
+	 */
+	services: prismic.GroupField<Simplify<ContactBlockSliceDefaultPrimaryServicesItem>>;
+
+	/**
+	 * Submit Action field in *ContactBlock → Default → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_block.default.primary.submit_action
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	submit_action: prismic.LinkField<string, string, unknown, prismic.FieldState, never>;
+
+	/**
+	 * Form Title field in *ContactBlock → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_block.default.primary.form_title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	form_title: prismic.RichTextField;
+
+	/**
+	 * Heading field in *ContactBlock → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_block.default.primary.heading
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	heading: prismic.KeyTextField;
+
+	/**
+	 * Email Js Service Id field in *ContactBlock → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: service_3a0y6ug
+	 * - **API ID Path**: contact_block.default.primary.email_js_service_id
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	email_js_service_id: prismic.KeyTextField;
+
+	/**
+	 * Email Js Template Id field in *ContactBlock → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: template_5ialvlr
+	 * - **API ID Path**: contact_block.default.primary.email_js_template_id
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	email_js_template_id: prismic.KeyTextField;
+
+	/**
+	 * Email js Public Key field in *ContactBlock → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: kpoOrce28s1JA7Y6g
+	 * - **API ID Path**: contact_block.default.primary.email_js_public_key
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	email_js_public_key: prismic.KeyTextField;
+
+	/**
+	 * Recaptcha Site Key field in *ContactBlock → Default → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: 6Pc8hkArAAAAALKdnTG0ohxIFBlLGgKZIWfS8oOy
+	 * - **API ID Path**: contact_block.default.primary.recaptcha_site_key
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	recaptcha_site_key: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for ContactBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Standard contact block with contact details, selectable services, and a contact form.
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactBlockSliceDefault = prismic.SharedSliceVariation<
+	'default',
+	Simplify<ContactBlockSliceDefaultPrimary>,
+	never
+>;
+
+/**
+ * Slice variation for *ContactBlock*
+ */
+type ContactBlockSliceVariation = ContactBlockSliceDefault;
+
+/**
+ * ContactBlock Shared Slice
+ *
+ * - **API ID**: `contact_block`
+ * - **Description**: *None*
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ContactBlockSlice = prismic.SharedSlice<'contact_block', ContactBlockSliceVariation>;
 
 /**
  * Primary content in *ContentIndex → Default → Primary*
@@ -944,6 +1117,12 @@ declare module '@prismicio/client' {
 			BiographySliceDefaultPrimary,
 			BiographySliceVariation,
 			BiographySliceDefault,
+			ContactBlockSlice,
+			ContactBlockSliceDefaultPrimaryContactMethodsItem,
+			ContactBlockSliceDefaultPrimaryServicesItem,
+			ContactBlockSliceDefaultPrimary,
+			ContactBlockSliceVariation,
+			ContactBlockSliceDefault,
 			ContentIndexSlice,
 			ContentIndexSliceDefaultPrimary,
 			ContentIndexSliceVariation,

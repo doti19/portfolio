@@ -11,8 +11,8 @@ export let settings: Content.SettingsDocument;
 
 
 
-<Bounded as="footer" class="text-slate-600" >
-    <div class="container mx-auto flex mt-20 flex-col items-center justify-between gap-6 py-8 sm:flex-row ">
+<Bounded as="footer" class=" text-slate-600" >
+    <div class="footer container mx-auto flex mt-20 flex-col items-center justify-between gap-6 py-8 sm:flex-row ">
         <div class="name flex flex-col items-center justify-center gap-x-4 gap-y-2 sm:flex-row sm:justify-self-start">
 <a href="/" class="text-x1 font-extrabold tracking-tighter
  text-slate-100 transition-color duration-150 hover:text-yellow-400">
@@ -58,7 +58,7 @@ export let settings: Content.SettingsDocument;
 </Bounded>
 <!-- </div>?S -->
 <style>
-footer {
+.footer {
         
         position: absolute;
         bottom: 0;
@@ -66,6 +66,7 @@ footer {
         right: 0;
         width: 100%;
         padding: 2rem 0;
+        /* margin-top: 2rem;  */
 
 
     }

@@ -1,0 +1,115 @@
+{
+  "type": "SharedSlice",
+  "id": "contact_block",
+  "name": "ContactBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Standard contact block with contact details, selectable services, and a contact form.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "subtitle": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph,strong,em,hyperlink",
+            "label": "Subtitle"
+          }
+        },
+        "contact_methods": {
+          "type": "Group",
+          "config": {
+            "label": "Contact Methods",
+            "fields": {
+              "contact_type": {
+                "type": "Select",
+                "config": {
+                  "label": "Contact Type",
+                  "options": [
+                    "address",
+                    "phone",
+                    "email"
+                  ]
+                }
+              },
+              "value": {
+                "type": "Text",
+                "config": {
+                  "label": "Value"
+                }
+              }
+            }
+          }
+        },
+        "services": {
+          "type": "Group",
+          "config": {
+            "label": "Services",
+            "fields": {
+              "service_name": {
+                "type": "Text",
+                "config": {
+                  "label": "Service Name"
+                }
+              }
+            }
+          }
+        },
+        "submit_action": {
+          "type": "Link",
+          "config": {
+            "label": "Submit Action",
+            "allowText": false,
+            "repeat": false,
+            "select": null
+          }
+        },
+        "form_title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "Form Title"
+          }
+        },
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        },
+        "email_js_service_id": {
+          "type": "Text",
+          "config": {
+            "label": "Email Js Service Id",
+            "placeholder": "service_3a0y6ug"
+          }
+        },
+        "email_js_template_id": {
+          "type": "Text",
+          "config": {
+            "label": "Email Js Template Id",
+            "placeholder": "template_5ialvlr"
+          }
+        },
+        "email_js_public_key": {
+          "type": "Text",
+          "config": {
+            "label": "Email js Public Key",
+            "placeholder": "kpoOrce28s1JA7Y6g"
+          }
+        },
+        "recaptcha_site_key": {
+          "type": "Text",
+          "config": {
+            "label": "Recaptcha Site Key",
+            "placeholder": "6Pc8hkArAAAAALKdnTG0ohxIFBlLGgKZIWfS8oOy"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
